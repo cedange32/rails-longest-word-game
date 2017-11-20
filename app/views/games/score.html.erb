@@ -1,0 +1,12 @@
+<h1>Result</h1>
+<% if @result == "not in the grid" %>
+<p>Sorry but <%= @word %> can't be built out of <%= @letters %></p>
+<% else %>
+  <% if @score == "not in the English dictionary" %>
+    <p>Sorry but <%= @word %> is not in the English dictionary</p>
+  <% else %>
+    <p>Good job, your score is <%= @score %></p>
+  <% end %>
+<% end %>
+<%= link_to "Play again", new_path %>
+
